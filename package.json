@@ -1,0 +1,24 @@
+{
+  "name": "cdk_drreference_api",
+  "version": "0.1.0",
+  "bin": {
+    "cdk_drreference_api": "bin/cdk_drreference_api.js"
+  },
+  "scripts": {
+    "build": "sam build",
+    "cdk": "cdk",
+    "test": "jest",
+    "start": "sam local start-api",
+    "dev": "nodemon --watch lambda --exec \"npm run build\"",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "aws-cdk": "2.149.0",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.149.0",
+    "constructs": "^10.0.0"
+  }
+}

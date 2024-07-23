@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  MainFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/index.handler
+      Runtime: nodejs18.x
+      CodeUri: lambda/
+      Events:
+        GetRequest:
+          Type: Api
+          Properties:
+            Path: /items/{id}
+            Method: get
+        PostRequest:
+          Type: Api
+          Properties:
+            Path: /items
+            Method: post
+        PutRequest:
+          Type: Api
+          Properties:
+            Path: /items/{id}
+            Method: put
+        DeleteRequest:
+          Type: Api
+          Properties:
+            Path: /items/{id}
+            Method: delete

@@ -1,0 +1,8 @@
+node_modules
+.aws-sam
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+# local env files
+.env*.local
+.env
